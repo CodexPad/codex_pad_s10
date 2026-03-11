@@ -117,21 +117,24 @@
 
 ---
 
-## MAC Address说明
+## Bluetooth Device Address(BD_ADDR)说明
 
-在连接与开发时，可能需要使用到设备的唯一标识：MAC Address。它如同设备的“身份证号”，若需指定连接本设备而非广播中的其他设备，将会使用到此地址。
+在连接与开发时，可能需要使用到设备的唯一标识：Bluetooth Device Address(BD_ADDR)。它如同设备的“身份证号”，若需指定连接本设备而非广播中的其他设备，将会使用到此信息
+
+> **注意：术语说明**  
+> 本文档统一使用标准术语 Bluetooth Device Address(BD_ADDR)。请注意，在部分旧的示例代码、SDK或针对旧型号设备的文档中，可能会使用 MAC Address​ 来指代 Bluetooth Device Address(BD_ADDR)。在蓝牙上下文中，两者通常指向同一个地址。
 
 它由12位十六进制字符组成，以冒号分隔，格式为`XX:XX:XX:XX:XX:XX`（其中`X`为 0-9 或 A-F），例如：`E4:66:E5:A2:24:5D`。
 
-### 获取MAC Address
+### 获取Bluetooth Device Address(BD_ADDR)
 
-MAC Address印于**手柄背部中央**的标签上，请自行查看和记录。
+Bluetooth Device Address(BD_ADDR)印于**手柄背部中央**的标签上，请自行查看和记录。
 
 ---
 
 ## 连接与使用
 
-请根据您使用的硬件平台和开发平台，选择对应的库和示例代码进行开发。在示例代码中，通常需要填入手柄的 **MAC Address** 以建立连接。
+请根据您使用的硬件平台和开发平台，选择对应的库和示例代码进行开发。在示例代码中，通常需要填入手柄的 **Bluetooth Device Address(BD_ADDR)** 以建立连接。
 
 > **💡 供电提示**：在连接与调试过程中，**建议通过USB接口为手柄供电**。这可以避免因电池电量不足导致的意外关机，确保调试过程稳定。首次使用产品时，内置电池可能处于低电量状态，续航时间短。为避免调试中断，请先连接USB供电进行测试，待电池充满后再移除使用。
 
