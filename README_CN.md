@@ -51,19 +51,6 @@
 
 ---
 
-## 软件与兼容性
-
-| 硬件平台 | 支持的开发环境 |
-| :--- | :--- |
-| ESP32 | Arduino IDE, MicroPython，米思齐（mixly），Mind+ |
-| ESP32-S3 | Arduino IDE, MicroPython，米思齐（mixly），Mind+ |
-| ESP32-C3 | Arduino IDE, MicroPython，米思齐（mixly），Mind+ |
-| micro:bit | MakeCode |
-
-为上述平台提供完整的驱动库、文档及项目示例。
-
----
-
 ## 开机与关机
 
 - **开机**：短按（单击）手柄中央的**单元键**，1号蓝色指示灯开始慢闪，设备启动。
