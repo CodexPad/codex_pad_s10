@@ -1,3 +1,3 @@
 # CodexPad-S10
 
-[中文版](README_CN.md)
+[中文](README.zh-CN.md)
