@@ -12,13 +12,13 @@
 
 ## 产品外观图
 
-> TODO
+![codexpad_s10](picture/codexpad_s10.jpg)
 
 ---
 
 ## 产品部件示意图
 
-> TODO
+![产品部件示意图](picture/functional_illustration.jpg)
 
 ---
 
