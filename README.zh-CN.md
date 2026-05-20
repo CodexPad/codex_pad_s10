@@ -22,6 +22,12 @@
 
 ---
 
+## 按键示意图
+
+![按键示意图](picture/button_illustration.jpg)
+
+---
+
 ## 输入设备规格
 
 - 按键数量：17
