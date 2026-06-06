@@ -143,6 +143,19 @@ Bluetooth Device Address(BD_ADDR)印于**手柄背部中央**的标签上，请�
 
 ---
 
+## 综合应用
+
+### 基础示例
+
+基础示例演示了如何通过手柄单独控制某一类外设，覆盖直流电机、编码电机和舵机的控制演示。每个示例都针对特定的硬件方案设计，您可以根据自己使用的开发板和驱动模块，点击下方链接查看对应的详细说明：
+
+| 硬件方案（点击查看示例说明） |
+| :--- |
+| [MAKER-ESP32 开发板（板载电机驱动）](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_maker_esp32.zh-CN.md#codexpad-s10手柄控制示例maker-esp32开发板示例说明) |
+| [MAKER-ESP32-PRO 开发板（板载电机驱动）](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_maker_esp32_pro.zh-CN.md#codexpad-s10手柄控制示例maker-esp32-pro开发板示例说明) |
+| [AI-VOX3 开发板 + MD40 驱动模块](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ai_vox3_.zh-CN.md#codexpad-s10手柄控制示例ai-vox3开发板示例说明) |
+| [BLE-UNO 开发板 + MotorDriverBoard V5.2 驱动板](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板示例说明) |
+
 ## 注意事项
 
 [注意事项](../../../codex_pad_guide/blob/main/notice.zh-CN.md#注意事项)
