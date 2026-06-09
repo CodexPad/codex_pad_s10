@@ -145,4 +145,4 @@ To extend the lifespan of the built‑in lithium battery, follow these charging 
 
 ## Important Notes
 
-[Important Notes](../../../codex_pad_guide/blob/main/docs/en/notice.md#important-notes)
+[Important Notes](../../../codex_pad_guide/blob/main/notice.md#important-notes)
