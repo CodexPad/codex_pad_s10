@@ -12,19 +12,19 @@
 
 ## 产品外观图
 
-![codexpad_s10](picture/codexpad_s10.jpg)
+![codexpad_s10](assets/image/zh-CN/codexpad_s10.jpg)
 
 ---
 
 ## 产品部件示意图
 
-![产品部件示意图](picture/functional_illustration.jpg)
+![产品部件示意图](assets/image/zh-CN/functional_illustration.jpg)
 
 ---
 
 ## 按键示意图
 
-![按键示意图](picture/button_illustration.jpg)
+![按键示意图](assets/image/zh-CN/button_illustration.jpg)
 
 ---
 
@@ -137,9 +137,9 @@ Bluetooth Device Address(BD_ADDR)印于**手柄背部中央**的标签上，请�
 
 | 硬件平台特征 | 典型代表平台 | 文档 | 核心特点 |
 | :--- | :--- | :--- | :--- |
-| 主控自带BLE功能或者有BLE协处理器，同时软件可以自己调用底层BLE API进行设备连接 | <ul><li>ESP32</li><li>ESP32-S2</li><li>ESP32-S3</li><li>ESP32-C3</li><li>ESP32-C5</li><li>ESP32-C6</li><li>ESP32-H2</li><li>ESP32-P4</li><li>Raspberry Pi Pico W</li><li>Raspberry Pi Pico 2 W</li><li>micro:bit v2</li></ul> | [CodexPad连接使用指南：使用硬件平台内置BLE](../../../codex_pad_guide/blob/main/connection_guide_native_ble.zh-CN.md#codexpad连接使用指南使用硬件平台内置ble) | 无需外接模块，提供了库和示例，直接编程使用 |
-| 主控（如 STM32/Arduino）没有蓝牙，需要外接蓝牙转串口模块（插在 TX/RX 引脚上） | <ul><li>Arduino UNO + NL16</li><li>BLE UNO(同Arduino UNO + NL16)</li><li>STM32 + HC05</li><li>Arduino UNO + HC05</li></ul> | [CodexPad连接使用指南：使用BLE转串口模块](../../../codex_pad_guide/blob/main/connection_guide_ble_uart.zh-CN.md#codexpad连接使用指南使用ble转串口模块) | **透传模式**，数据通过串口转发 |
-| 主控（如 STM32/Arduino）没有蓝牙，需要在I2C总线上外接CodexPad专用接收器（开发中） | 任意支持I2C的硬件平台 | [CodexPad连接使用指南：使用专用的BLE转I2C接收器](../../../codex_pad_guide/blob/main/connection_guide_i2c_receiver.zh-CN.md#codexpad连接使用指南使用专用的ble转i2c接收器) | |
+| 主控自带BLE功能或者有BLE协处理器，同时，软件可以自己调用底层BLE API进行设备连接 | <ul><li>ESP32</li><li>ESP32-S2</li><li>ESP32-S3</li><li>ESP32-C3</li><li>ESP32-C5</li><li>ESP32-C6</li><li>ESP32-H2</li><li>ESP32-P4</li><li>Raspberry Pi Pico W</li><li>Raspberry Pi Pico 2 W</li><li>micro:bit v2</li></ul> | [CodexPad连接使用指南：使用硬件平台内置BLE](../../../codex_pad_guide/blob/main/docs/zh-CN/connection_guide_native_ble.md#codexpad连接使用指南使用硬件平台内置ble) | 无需外接模块，提供了库和示例，直接编程使用 |
+| 主控（如 STM32/Arduino）没有蓝牙，需要外接蓝牙转串口模块（插在 TX/RX 引脚上） | <ul><li>Arduino UNO + NL16</li><li>BLE UNO(同Arduino UNO + NL16)</li><li>STM32 + HC05</li><li>Arduino UNO + HC05</li></ul> | [CodexPad连接使用指南：使用BLE转串口模块](../../../codex_pad_guide/blob/main/docs/zh-CN/connection_guide_ble_uart.md#codexpad连接使用指南使用ble转串口模块) | **透传模式**，数据通过串口转发 |
+| 主控（如 STM32/Arduino）没有蓝牙，需要在I2C总线上外接CodexPad专用接收器（开发中） | 任意支持I2C的硬件平台 | [CodexPad连接使用指南：使用专用的BLE转I2C接收器](../../../codex_pad_guide/blob/main/docs/zh-CN/connection_guide_i2c_receiver.md#codexpad连接使用指南使用专用的ble转i2c接收器) | |
 
 ---
 
@@ -156,6 +156,8 @@ Bluetooth Device Address(BD_ADDR)印于**手柄背部中央**的标签上，请�
 | [AI-VOX3 开发板 + MD40 驱动模块](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ai_vox3_.zh-CN.md#codexpad-s10手柄控制示例ai-vox3开发板示例说明) |
 | [BLE-UNO 开发板 + MotorDriverBoard V5.2 驱动板](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板示例说明) |
 
+---
+
 ## 注意事项
 
-[注意事项](../../../codex_pad_guide/blob/main/notice.zh-CN.md#注意事项)
+[注意事项](../../../codex_pad_guide/blob/main/docs/zh-CN/notice.zh-CN.md#注意事项)
