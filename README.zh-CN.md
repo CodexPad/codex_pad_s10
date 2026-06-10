@@ -156,6 +156,14 @@ Bluetooth Device Address(BD_ADDR)印于**手柄背部中央**的标签上，请�
 | [AI-VOX3 开发板 + MD40 驱动模块](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ai_vox3_.zh-CN.md#codexpad-s10手柄控制示例ai-vox3开发板示例说明) |
 | [BLE-UNO 开发板 + MotorDriverBoard V5.2 驱动板](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno.zh-CN.md#codexpad-s10手柄控制示例ble-uno开发板示例说明) |
 
+### 麦克纳姆轮小车示例
+
+麦克纳姆轮小车示例演示如何使用手柄遥控麦克纳姆轮小车，包含全向移动、速度调节、云台俯仰和夹子开合等完整功能。**目前仅限 BLE-UNO 平台**。
+
+| 硬件方案（点击查看示例说明） |
+| :--- |
+| [BLE-UNO开发板 + MotorDriverBoard V5.2驱动板](https://gitee.com/nulllab_1/docs_examples_gamepad_peripheral_control/blob/main/examples_description_ble_uno_car.zh-CN.zh-CN.md#codexpad-s10手柄控制麦克纳姆轮小车ble-uno开发板示例说明) |
+
 ---
 
 ## 注意事项
