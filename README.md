@@ -4,16 +4,16 @@
 
 ## Overview
 
-**CodexPad-S10** is a Bluetooth Low Energy controller from the CodexPad series, designed specifically for makers and embedded developers. Unlike conventional controllers that depend on an operating system’s Bluetooth stack, this product **focuses on low‑barrier access to bare‑metal and lightweight runtime environments**, without the need for a heavy system layer. It can establish peer‑to‑peer communication directly with bare‑metal BLE devices such as **ESP32**, **ESP32‑S**, **ESP32‑C**, **STM32**, **nRF**, **micro:bit**, **Raspberry Pi**, and similar boards — no operating system required. This makes it an out‑of‑the‑box remote physical input solution for robots, IoT devices, custom control panels, and more.
+**CodexPad-S10** is a Bluetooth Low Energy gamepad from the CodexPad series, highly optimized for bare-metal and lightweight runtime environments. Unlike conventional gamepads that depend on an operating system’s Bluetooth stack, this product **focuses on low‑barrier access**. Utilizing an open, lightweight binary protocol, it can establish peer‑to‑peer communication directly with bare‑metal BLE devices such as **ESP32**, **ESP32‑S**, **ESP32‑C**, **STM32**, **nRF**, **micro:bit**, **Raspberry Pi**, and similar boards. This makes it an out‑of‑the‑box remote physical input solution for robots, IoT devices, custom control panels, and more.
 
-We provide a clean communication protocol, lightweight driver libraries, and a wide range of examples for supported platforms, so you can integrate the controller into your firmware quickly and focus on your core application.
+We provide a clean communication protocol, lightweight driver libraries, and a wide range of examples for supported platforms, so you can integrate the gamepad into your firmware quickly and focus on your core application.
 
-> **⚠️ Important: This is NOT a plug‑and‑play game controller**
+> **⚠️ Important: This is NOT a plug‑and‑play gamepad**
 >
-> The CodexPad-S10 **is not a BLE-HID device**, so it will NOT be automatically recognised by the operating system as a standard game controller like an Xbox or PlayStation pad. Therefore:
+> The CodexPad-S10 **is not a BLE-HID device**, so it will NOT be automatically recognised by the operating system as a standard gamepad like an Xbox or PlayStation gamepad. Therefore:
 >
 > - **❌ You CANNOT** simply pair it with Windows / macOS / Linux, a phone, or a game console and start playing games;
-> - **✅ You MUST** establish the Bluetooth connection **manually in code**, and parse the controller’s reported data (buttons, joysticks, etc.) yourself to obtain input.
+> - **✅ You MUST** establish the Bluetooth connection **manually in code**, and parse the gamepad’s reported data (buttons, joysticks, etc.) yourself to obtain input.
 >
 > In other words, **every input must be actively read and handled by your own program** — the system does not perform the “button → keyboard / gamepad event” translation for you. This product is positioned as a **development‑oriented input device**, not a plug‑and‑play gaming peripheral for end users.
 
@@ -58,8 +58,9 @@ We provide a clean communication protocol, lightweight driver libraries, and a w
 ## Connectivity and Protocol
 
 - Bluetooth version: Bluetooth Low Energy 5.3  
-- Transmission distance: up to 50 m (open area)  
-- Transmit power: **‑16 dBm** to **+6 dBm** (adjustable)  
+- Transmission distance: Up to 50 m (under optimal conditions; actual range depends on host Tx power, antenna gain, BLE PHY settings, and environmental factors)  
+- Transmit power: **0 ~ 6 dBm** (adaptive, automatically adjusted by the gamepad based on RSSI, no user configuration required)  
+- BLE PHY support: 1M, 2M, Coded S2, Coded S8  
 - Communication protocol: open, lightweight binary protocol optimized for embedded systems  
 - Supported role: BLE peripheral (slave)
 
@@ -68,7 +69,7 @@ We provide a clean communication protocol, lightweight driver libraries, and a w
 ## Officially Supported Platforms
 
 > **Note**: All hardware platforms listed in the table below are provided with official adaptation libraries and sample code, and developers can directly use the corresponding resources for rapid development.<br>
-> In theory, any hardware platform with standard BLE capability can communicate with this controller. If your platform is not included in the list, you may refer to the library implementations and communication protocols of existing supported platforms for self-porting. The official team will also continuously evaluate and expand support for new platforms based on market demand and technical roadmap.
+> In theory, any hardware platform with standard BLE capability can communicate with this gamepad. If your platform is not included in the list, you may refer to the library implementations and communication protocols of existing supported platforms for self-porting. The official team will also continuously evaluate and expand support for new platforms based on market demand and technical roadmap.
 
 ### Native BLE Main Controller Platform
 
@@ -90,10 +91,10 @@ We provide a clean communication protocol, lightweight driver libraries, and a w
 
 ## Powering On and Off
 
-- **Power on**: Briefly press (click) the **Home button** in the centre of the controller. The No. 1 blue LED indicator will start blinking slowly, indicating the device is starting up.
+- **Power on**: Briefly press (click) the **Home button** in the centre of the gamepad. The No. 1 blue LED indicator will start blinking slowly, indicating the device is starting up.
 - **Power off**: While powered on, **long‑press the Home button for 3 seconds**. The No. 1 blue LED indicator will turn off and the device will shut down.
 
-> **💡 Tip**: If the controller shows **no LED response at all** after you attempt to power it on, or **the LEDs turn on but go out immediately**, the battery is most likely fully drained and cannot support startup or stable operation. Please charge the controller with a USB Type‑C cable first, then try again.
+> **💡 Tip**: If the gamepad shows **no LED response at all** after you attempt to power it on, or **the LEDs turn on but go out immediately**, the battery is most likely fully drained and cannot support startup or stable operation. Please charge the gamepad with a USB Type‑C cable first, then try again.
 
 ---
 
@@ -130,13 +131,13 @@ We provide a clean communication protocol, lightweight driver libraries, and a w
 
 ## Auto Power‑Off
 
-To conserve power, the controller will automatically shut down under the following two conditions:
+To conserve power, the gamepad will automatically shut down under the following two conditions:
 
-1. **Low‑battery auto power‑off**: When the battery drains to the minimum protection voltage, the controller powers off automatically and all LEDs turn off. This is a battery protection mechanism. **Please recharge promptly.** The controller will power on normally after charging.
+1. **Low‑battery auto power‑off**: When the battery drains to the minimum protection voltage, the gamepad powers off automatically and all LEDs turn off. This is a battery protection mechanism. **Please recharge promptly.** The gamepad will power on normally after charging.
 
-2. **Broadcast timeout auto power‑off**: After power‑on, if the controller remains in the **slow‑blinking** state (advertising and waiting for a connection) for **more than 1 minute** without being connected, it will turn itself off to save power.
+2. **Broadcast timeout auto power‑off**: After power‑on, if the gamepad remains in the **slow‑blinking** state (advertising and waiting for a connection) for **more than 1 minute** without being connected, it will turn itself off to save power.
 
-> **💡 Tip**: If the controller shuts down shortly after power‑on, first check the battery level indicators, or try to complete the Bluetooth connection as quickly as possible after turning it on.
+> **💡 Tip**: If the gamepad shuts down shortly after power‑on, first check the battery level indicators, or try to complete the Bluetooth connection as quickly as possible after turning it on.
 
 ---
 
@@ -144,7 +145,7 @@ To conserve power, the controller will automatically shut down under the followi
 
 When connecting to a CodexPad, you may need the device’s **unique** identifier: the **Bluetooth Device Address**. It acts like an “ID number” for the device, formatted as 12 hexadecimal characters separated by colons: `XX:XX:XX:XX:XX:XX` (where `X` is 0–9 or A–F), for example `E4:66:E5:A2:24:5D`.
 
-The Bluetooth Device Address (BD_ADDR) is printed on the label located **in the centre of the controller’s back panel**. Please check and record it yourself.
+The Address is printed on the label located **in the centre of the gamepad’s back panel**. Please check and record it yourself.
 
 ---
 
@@ -152,15 +153,15 @@ The Bluetooth Device Address (BD_ADDR) is printed on the label located **in the 
 
 To extend the lifespan of the built‑in lithium battery, follow these charging and care guidelines:
 
-- **Avoid overcharging; disconnect when full**: Lithium batteries do not need a “12‑hour first charge” activation. When the green LEDs No. 2‑4 stay **solid on** (fully charged), disconnect the charger promptly. Avoid leaving the controller plugged in for extended periods (e.g., overnight or for several days) — staying at 100 % charge for a long time accelerates battery ageing.
+- **Avoid overcharging; disconnect when full**: Lithium batteries do not need a “12‑hour first charge” activation. When the green LEDs No. 2‑4 stay **solid on** (fully charged), disconnect the charger promptly. Avoid leaving the gamepad plugged in for extended periods (e.g., overnight or for several days) — staying at 100 % charge for a long time accelerates battery ageing.
 
-- **Charge as needed; avoid deep discharge**: You don’t have to wait until the battery is completely empty to recharge. When the battery gauge shows **low** (only LED 2 is on), you can charge the controller. Frequent deep discharge (to auto‑power‑off) significantly shortens battery life.
+- **Charge as needed; avoid deep discharge**: You don’t have to wait until the battery is completely empty to recharge. When the battery gauge shows **low** (only LED 2 is on), you can charge the gamepad. Frequent deep discharge (to auto‑power‑off) significantly shortens battery life.
 
 - **Use a suitable charger**: Please use a standards‑compliant 5 V / 1 A (or 5 V / 500 mA) USB charger or a computer USB port. **Avoid using fast chargers** — excessive current may cause the battery to heat up, affecting safety and lifespan.
 
 - **Charge in a suitable environment**: Whenever possible, charge at room temperature (0 °C – 35 °C). Extreme high temperatures (e.g. inside a car in summer) or very low temperatures will seriously reduce charging efficiency and harm battery health.
 
-- **Long‑term storage**: If you plan not to use the controller for an extended period (more than one month), charge the battery to a **medium level** (around 50 %–60 %, i.e. LEDs 2 and 3 on, LED 4 off) and store it in a cool, dry place. Never store the controller for long periods either fully charged or fully drained.
+- **Long‑term storage**: If you plan not to use the gamepad for an extended period (more than one month), charge the battery to a **medium level** (around 50 %–60 %, i.e. LEDs 2 and 3 on, LED 4 off) and store it in a cool, dry place. Never store the gamepad for long periods either fully charged or fully drained.
 
 ---
 
